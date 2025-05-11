@@ -1,0 +1,343 @@
+<SGLanguage DisplayName="Русский">
+    <Shared>
+        <SuperGrate>Super Grate</SuperGrate>
+        <OK>ОК</OK>
+        <Cancel>Отмена</Cancel>
+        <Start>Старт</Start>
+        <Delete>Удалить</Delete>
+        <Store>Хранилище</Store>
+        <SourceComputer>Исходный компьютер</SourceComputer>
+        <DestinationComputer>Целевой компьютер</DestinationComputer>
+        <SourceUserName>Имя пользователя (источник)</SourceUserName>
+        <DestinationUserName>Имя пользователя (цель)</DestinationUserName>
+        <Log>
+            <Done>Готово.</Done>
+            <SuperGrateXML>SuperGrate.xml</SuperGrateXML>
+            <Failed>
+                <WriteStoreParameterTo>Не удалось записать параметр(ы) хранилища в {0}.</WriteStoreParameterTo>
+            </Failed>
+        </Log>
+    </Shared>
+    <Class>
+        <Config>
+            <Log>
+                <GeneratingXML>Генерация {Shared/Log/SuperGrateXML}...</GeneratingXML>
+                <XMLIsMissingKey>{Shared/Log/SuperGrateXML} отсутствует {0}.</XMLIsMissingKey>
+                <XMLLoaded>{Shared/Log/SuperGrateXML} загружен.</XMLLoaded>
+                <XMLLoadedButIsUsingDefaults>Конфигурация загружена, но используются значения по умолчанию для отсутствующих элементов. Вы можете исправить это предупреждение, сохранив текущие настройки.</XMLLoadedButIsUsingDefaults>
+                <Done>{Shared/Log/Done}</Done>
+                <Failed>
+                    <SaveConfigurationToDisk>Не удалось сохранить {Shared/Log/SuperGrateXML} на диск.</SaveConfigurationToDisk>
+                    <LoadConfiguration>Не удалось загрузить {Shared/Log/SuperGrateXML}.</LoadConfiguration>
+                </Failed>
+            </Log>
+            <Comment>
+                <USMTPath>UNC-путь или прямой путь к каталогу USMT (например: .\USMT\X64)</USMTPath>
+                <PayloadPath>Локальный путь на исходном компьютере, откуда {Shared/SuperGrate} будет запускать USMT (например: C:\SuperGrate)</PayloadPath>
+                <UseStoreDirectly>При генерации или восстановлении MIG-файла читать/писать напрямую в хранилище вместо копирования MIG-файла на/с целевого компьютера</UseStoreDirectly>
+                <MigrationStorePath>UNC-путь или прямой путь к хранилищу миграции USMT (например: \\ba-share\s$ или .\STORE)</MigrationStorePath>
+                <ScanLoadStateParams>Параметры командной строки ScanState.exe и LoadState.exe (см.: https://docs.microsoft.com/en-us/windows/deployment/usmt/usmt-command-line-syntax )</ScanLoadStateParams>
+                <AutoDeleteFromStore>Удалять пользователя из хранилища после восстановления? (Хранилище → Цель)</AutoDeleteFromStore>
+                <AutoDeleteFromSource>Удалять пользователя из исходного компьютера после резервного копирования? (Источник → Хранилище)</AutoDeleteFromSource>
+                <HideBuiltInAccounts>Скрыть учетные записи NT AUTHORITY и NT SERVICE?</HideBuiltInAccounts>
+                <HideUnknownSIDs>Скрыть неизвестные учетные записи?</HideUnknownSIDs>
+                <DumpLogHere>Записать журнал на диск при выходе (оставьте пустым для отключения) (например: \\ba-share\s$\Logs или .\Logs)</DumpLogHere>
+                <ULColumns>Список отображаемых столбцов для пользователей источника или хранилища</ULColumns>
+                <ULViewMode>Режим отображения списка пользователей (например: Large (0) / Small Icon (2), List (3), Details (1) и Tile (4))</ULViewMode>
+                <SourceComputer>Исходный компьютер по умолчанию при запуске</SourceComputer>
+                <DestinationComputer>Целевой компьютер по умолчанию при запуске</DestinationComputer>
+                <TabView>Режим отображения вкладок при запуске (например: Source, Store или None)</TabView>
+                <SecurityProtocol>Версия протокола безопасности (требуется перезапуск) (например: SystemDefault, Ssl3, Tls, Tls11, Tls12 или Tls13)</SecurityProtocol>
+                <Language>Язык (например: ru)</Language>
+            </Comment>
+        </Config>
+        <Download>
+            <Log>
+                <Failed>
+                    <Download>Не удалось загрузить из {0}.</Download>
+                </Failed>
+            </Log>
+        </Download>
+        <FileOperations>
+            <Log>
+                <Failed>
+                    <GetFolderSize>Не удалось получить размер папки.</GetFolderSize>
+                </Failed>
+            </Log>
+        </FileOperations>
+        <Language>
+            <Log>
+                <Failed>
+                    <FindLanguage>Не удалось найти язык.</FindLanguage>
+                </Failed>
+            </Log>
+        </Language>
+        <Logger>
+            <Prefix>
+                <Info>ИНФО</Info>
+                <Success>УСПЕХ</Success>
+                <Warning>ПРЕДУПРЕЖДЕНИЕ</Warning>
+                <Error>ОШИБКА</Error>
+                <Verbose>ПОДРОБНО</Verbose>
+            </Prefix>
+            <Log>
+                <Failed>
+                    <WriteErrorToWindow>Не удалось записать сообщение об ошибке в главное окно.</WriteErrorToWindow>
+                    <WriteLogToDisk>Не удалось записать журнал на диск.</WriteLogToDisk>
+                </Failed>
+            </Log>
+        </Logger>
+        <Misc>
+            <Log>
+                <FoundUser>Найден пользователь {0}.</FoundUser>
+                <SkippedSIDUser>Пропущен {0} {1}.</SkippedSIDUser>
+                <SkippedUnknownSID>Пропущен неизвестный SID {0}.</SkippedUnknownSID>
+                <SkippedSIDMissingProfile>Пропущен SID без профильного каталога на удаленном ПК {0}.</SkippedSIDMissingProfile>
+                <CalculatingProfileSizeFor>Рассчитывается размер профиля для {0}...</CalculatingProfileSizeFor>
+                <ListingUsersFrom>Список пользователей из {0}...</ListingUsersFrom>
+                <CanceledListingUsersFrom>Отменен список пользователей из {0}.</CanceledListingUsersFrom>
+                <UsersListedSuccessfullyFrom>Пользователи успешно перечислены из {0}.</UsersListedSuccessfullyFrom>
+                <DeletingUserFromTheStore>Удаление {0} из хранилища...</DeletingUserFromTheStore>
+                <DeletingUserFrom>Удаление {0} из {1}...</DeletingUserFrom>
+                <UserSuccessfullyDeletedFromTheStore>Пользователь {0} успешно удален из хранилища.</UserSuccessfullyDeletedFromTheStore>
+                <CopyingUserDeleteAgentToRemotePC>Копирование агента удаления пользователя на удаленный ПК {0}...</CopyingUserDeleteAgentToRemotePC>
+                <RemovingUserDeleteAgentFromRemotePC>Удаление агента удаления пользователя с удаленного ПК {0}...</RemovingUserDeleteAgentFromRemotePC>
+                <StoppingUserDeleteAgentOnRemotePC>Остановка агента удаления пользователя на {0}...</StoppingUserDeleteAgentOnRemotePC>
+                <UserDeleteAgentHasBeenStoppedOn>Агент удаления пользователя остановлен на {0}.</UserDeleteAgentHasBeenStoppedOn>
+                <GatheringOSArchitectureOn>Сбор архитектуры ОС на {0}...</GatheringOSArchitectureOn>
+                <TheOSArchitectureOnIs>Архитектура ОС на {0} — {1}.</TheOSArchitectureOnIs>
+                <Done>{Shared/Log/Done}</Done>
+                <Failed>
+                    <ResolveSIDViaWMI>Не удалось разрешить SID через WMI.</ResolveSIDViaWMI>
+                    <ResolveStoreGUID>Не удалось разрешить GUID хранилища.</ResolveStoreGUID>
+                    <RetrieveHostnameFrom>Не удалось получить имя хоста из {0}.</RetrieveHostnameFrom>
+                    <ListUsersFrom>Не удалось перечислить пользователей из {0}.</ListUsersFrom>
+                    <ReadSIDFromStoreID>Не удалось прочитать SID из идентификатора хранилища {0}.</ReadSIDFromStoreID>
+                    <ReadUserFromStoreID>Не удалось прочитать пользователя из идентификатора хранилища {0}.</ReadUserFromStoreID>
+                    <DeleteUserFromTheStore>Не удалось удалить {0} из хранилища.</DeleteUserFromTheStore>
+                    <DeleteUserFrom>Не удалось удалить {0} из {1}.</DeleteUserFrom>
+                    <StopUserDeleteAgentOn>Не удалось остановить агент удаления пользователя на {0}.</StopUserDeleteAgentOn>
+                    <GatherOSArchitectureOn>Не удалось собрать архитектуру ОС на {0}.</GatherOSArchitectureOn>
+                </Failed>
+            </Log>
+        </Misc>
+        <Remote>
+            <Log>
+                <WaitingForProcessToFinish>Ожидание завершения {0}...</WaitingForProcessToFinish>
+                <Failed>
+                    <RunCommandOn>Не удалось запустить команду на {0}.</RunCommandOn>
+                    <WaitForRemoteProcess>Не удалось дождаться завершения удаленного процесса {0}.</WaitForRemoteProcess>
+                </Failed>
+            </Log>
+        </Remote>
+        <UserList>
+            <Column>
+                <SecurityIdentifier>Идентификатор безопасности</SecurityIdentifier>
+                <UserName>Имя пользователя</UserName>
+                <LastModified>Последнее изменение</LastModified>
+                <FirstCreated>Создан</FirstCreated>
+                <ProfilePath>Путь к профилю</ProfilePath>
+                <Size>Размер</Size>
+                <StoreIdentifier>Идентификатор хранилища</StoreIdentifier>
+                <SourceUserName>{Shared/SourceUserName}</SourceUserName>
+                <DestinationUserName>{Shared/DestinationUserName}</DestinationUserName>
+                <ImportedBy>Импортировано</ImportedBy>
+                <ImportedOn>Импортировано</ImportedOn>
+                <ExportedBy>Экспортировано</ExportedBy>
+                <ExportedOn>Экспортировано</ExportedOn>
+                <Status>Статус</Status>
+                <SourceComputer>{Shared/SourceComputer}</SourceComputer>
+                <DestinationComputer>{Shared/DestinationComputer}</DestinationComputer>
+            </Column>
+        </UserList>
+        <Migrate>
+            <Log>
+                <ApplyingUserStateOn>Применение состояния пользователя {0} на {1}....</ApplyingUserStateOn>
+                <CapturingUserStateOn>Захват состояния пользователя {0} на {1}....</CapturingUserStateOn>
+                <UploadingUSMTTo>Загрузка USMT в {0}...</UploadingUSMTTo>
+                <USMTUploadedSuccessfully>USMT успешно загружен.</USMTUploadedSuccessfully>
+                <USMTUploadCanceled>Загрузка USMT отменена.</USMTUploadCanceled>
+                <StoppingUSMTProcessOn>Остановка процесса USMT на {0}.</StoppingUSMTProcessOn>
+                <USMTProcessStoppedOn>Процесс USMT остановлен на {0}.</USMTProcessStoppedOn>
+                <RemovingUSMTFrom>Удаление USMT из {0}...</RemovingUSMTFrom>
+                <USMTRemovedSuccessfully>USMT успешно удален.</USMTRemovedSuccessfully>
+                <UserWillBeAppliedAs>Пользователь {0} будет применен как {1}.</UserWillBeAppliedAs>
+                <TransferringUserStateTo>Передача состояния пользователя в {0}...</TransferringUserStateTo>
+                <UserStateSuccessfullyTransferred>Состояние пользователя успешно передано.</UserStateSuccessfullyTransferred>
+                <DownloadingUSMTFromTheWeb>Загрузка USMT {0} из интернета...</DownloadingUSMTFromTheWeb>
+                <DecompressingUSMT>Распаковка USMT...</DecompressingUSMT>
+                <CleaningUpUSMT>Очистка USMT...</CleaningUpUSMT>
+                <USMTFinished>USMT завершен.</USMTFinished>
+                <Status>
+                    <Running>Выполняется</Running>
+                    <Done>Готово</Done>
+                </Status>
+                <Failed>
+                    <FindUSMTFolderAt>Не удалось найти папку USMT в {0}.</FindUSMTFolderAt>
+                    <StopUSMTOn>Не удалось остановить USMT на {0}.</StopUSMTOn>
+                    <DeleteUSMTOn>Не удалось удалить USMT на {0}.</DeleteUSMTOn>
+                    <DeleteUSMTAttempt>Не удалось удалить USMT, процесс может быть все еще активен, попытка периодически: Попытка {0}/{1}.</DeleteUSMTAttempt>
+                    <GenerateMUParameter>Не удалось сгенерировать параметр MU для USMT.</GenerateMUParameter>
+                    <TransferUserStateTo>Не удалось передать состояние пользователя в {0}.</TransferUserStateTo>
+                    <DownloadUSMT>Не удалось автоматически загрузить USMT из интернета, загрузите USMT вручную и обновите {Shared/Log/SuperGrateXML} соответственно.</DownloadUSMT>
+                    <OSArchitectureIsNotSupported>Архитектура ОС {0} не поддерживается.</OSArchitectureIsNotSupported>
+                    <WriteStoreParameterTo>{Shared/Log/Failed/WriteStoreParameterTo}</WriteStoreParameterTo>
+                    <WatchRemoteLog>Не удалось наблюдать за удаленным журналом в {0}.</WatchRemoteLog>
+                    <UploadUSMTTo>Не удалось загрузить USMT в {0}.</UploadUSMTTo>
+                    <NotEnoughDiskSpace>Не удалось завершить USMT из-за нехватки места на диске на исходном/целевом ПК. Попробуйте указать в настройках &quot;SuperGratePayloadPath&quot; внешний диск, подключенный к исходному/целевому ПК.</NotEnoughDiskSpace>
+                    <ErrorProcessingCLI>Не удалось запустить USMT, недопустимые значения в настройках &quot;ScanStateParameters&quot; или &quot;LoadStateParameters&quot;.</ErrorProcessingCLI>
+                    <WindowsServerIsNotSupported>Не удалось запустить USMT, ОС Windows Server не поддерживается.</WindowsServerIsNotSupported>
+                    <UnknownError>Не удалось запустить/завершить USMT, произошла неизвестная ошибка.</UnknownError>
+                    <PayloadPathAlreadyExists>Не удалось создать рабочий каталог для USMT в: {0}. Папка уже существует.</PayloadPathAlreadyExists>
+                </Failed>
+            </Log>
+        </Migrate>
+        <WMI>
+            <Log>
+                <Failed>
+                    <QueryWMI>Не удалось выполнить запрос WMI, {0} может иметь поврежденную установку WMI. Попробуйте выполнить команду &quot;winmgmt.exe /resetrepository&quot; на целевом ПК, чтобы решить эту проблему. https://docs.microsoft.com/en-us/windows/win32/wmisdk/winmgmt </QueryWMI>
+                    <ConnectToViaWMI>Не удалось подключиться к {0} через WMI. Убедитесь, что удаленный ПК в сети.</ConnectToViaWMI>
+                    <ConnectToViaWMIAccessDenied>Не удалось подключиться к {0} через WMI, так как доступ запрещен. Убедитесь, что ваша учетная запись имеет административные права на удаленном ПК.</ConnectToViaWMIAccessDenied>
+                    <WMIServiceDisabled>Не удалось подключиться к {0} через WMI, так как служба WMI не запущена.</WMIServiceDisabled>
+                </Failed>
+            </Log>
+        </WMI>
+    </Class>
+    <Control>
+        <About>
+            <About>О программе {0}</About>
+            <Version>Версия {0}</Version>
+            <License>Лицензия</License>
+            <GitHub>GitHub</GitHub>
+            <OK>{Shared/OK}</OK>
+        </About>
+        <ChangeColumns>
+            <AddRemoveColumns>Добавить/удалить столбцы</AddRemoveColumns>
+            <Add>Добавить -></Add>
+            <Remove><- Удалить</Remove>
+            <MoveUp>Переместить вверх</MoveUp>
+            <MoveDown>Переместить вниз</MoveDown>
+            <RestoreDefaults>Восстановить по умолчанию</RestoreDefaults>
+            <AvailableColumns>Доступные столбцы:</AvailableColumns>
+            <DisplayedColumns>Отображаемые столбцы:</DisplayedColumns>
+            <OK>{Shared/OK}</OK>
+            <Cancel>{Shared/Cancel}</Cancel>
+        </ChangeColumns>
+        <ChangeSetting>
+            <Default>По умолчанию</Default>
+            <ChangeSetting>Изменить настройку:</ChangeSetting>
+            <DefaultValue>Значение по умолчанию:</DefaultValue>
+            <OK>{Shared/OK}</OK>
+            <Cancel>{Shared/Cancel}</Cancel>
+        </ChangeSetting>
+        <ConfirmDialog>
+            <OK>{Shared/OK}</OK>
+            <Cancel>{Shared/Cancel}</Cancel>
+        </ConfirmDialog>
+        <DirectorySearch>
+            <Name>Имя</Name>
+            <Description>Описание</Description>
+            <OrganizationalUnit>Организационная единица</OrganizationalUnit>
+            <Search>Поиск</Search>
+            <SelectAComputer>Выберите компьютер</SelectAComputer>
+            <Searching>Поиск...</Searching>
+            <OK>{Shared/OK}</OK>
+            <Cancel>{Shared/Cancel}</Cancel>
+            <Log>
+                <SearchingActiveDirectoryFor>Поиск в Active Directory для {0}...</SearchingActiveDirectoryFor>
+                <FoundComputers>Найдено {0} компьютеров.</FoundComputers>
+                <Done>{Shared/Log/Done}</Done>
+                <Failed>
+                    <SearchActiveDirectory>Не удалось выполнить поиск в Active Directory.</SearchActiveDirectory>
+                </Failed>
+            </Log>
+        </DirectorySearch>
+        <License>
+            <License>лицензия</License>
+        </License>
+        <RenameStoreUser>
+            <SetDestinationUserName>Установите имя пользователя (цель)</SetDestinationUserName>
+            <UseThisDialog>Используйте это диалоговое окно для указания &quot;имени пользователя (цель)&quot; при восстановлении профиля из &quot;хранилища&quot;</UseThisDialog>
+            <SourceUserName>{Shared/SourceUserName}</SourceUserName>
+            <DestinationUserName>{Shared/DestinationUserName}</DestinationUserName>
+            <OK>{Shared/OK}</OK>
+            <Cancel>{Shared/Cancel}</Cancel>
+            <Log>
+                <Done>{Shared/Log/Done}</Done>
+                <SavingDataToMigrationStore>Сохранение данных пользователя в хранилище миграции...</SavingDataToMigrationStore>
+                <Failed>
+                    <WriteStoreParameterTo>{Shared/Log/Failed/WriteStoreParameterTo}</WriteStoreParameterTo>
+                </Failed>
+            </Log>
+        </RenameStoreUser>
+        <Settings>
+            <Settings>Настройки</Settings>
+            <Reload>Перезагрузить</Reload>
+            <SaveToDisk>Сохранить на диск</SaveToDisk>
+            <Close>Закрыть</Close>
+            <DoubleClickToChangeValue>Дважды щелкните настройку, чтобы изменить ее значение</DoubleClickToChangeValue>
+            <Loaded>Загружено</Loaded>
+            <Saved>Сохранено</Saved>
+            <Setting>Настройка</Setting>
+            <Value>Значение</Value>
+        </Settings>
+        <UserProperties>
+            <UserProperties>Свойства пользователя</UserProperties>
+            <OK>{Shared/OK}</OK>
+        </UserProperties>
+        <Main>
+            <WelcomeTo>Добро пожаловать в {0}! v{1}</WelcomeTo>
+            <ListSource>Список источников</ListSource>
+            <ListStore>Список хранилищ</ListStore>
+            <SourceComputer>{Shared/SourceComputer}</SourceComputer>
+            <DestinationComputer>{Shared/DestinationComputer}</DestinationComputer>
+            <Start>{Shared/Start}</Start>
+            <Stop>Остановить</Stop>
+            <UsersOnSourceComputer>Пользователи на исходном компьютере:</UsersOnSourceComputer>
+            <UsersInMigrationStore>Пользователи в хранилище миграции:</UsersInMigrationStore>
+            <DeleteUser>Удалить пользователя</DeleteUser>
+            <DeleteUsers>Удалить пользователей</DeleteUsers>
+            <AreYouSureDeleteUser>Вы уверены, что хотите удалить этого пользователя?</AreYouSureDeleteUser>
+            <AreYouSureDeleteUsers>Вы уверены, что хотите удалить этих {0} пользователей?</AreYouSureDeleteUsers>
+            <Delete>{Shared/Delete}</Delete>
+            <Menu>
+                <File>Файл</File>
+                <NewInstance>Новый экземпляр</NewInstance>
+                <Settings>Настройки...</Settings>
+                <SaveLog>Сохранить журнал...</SaveLog>
+                <Exit>Выход</Exit>
+                <View>Вид</View>
+                <AddRemoveColumns>Добавить/удалить столбцы...</AddRemoveColumns>
+                <LargeIcons>Крупные значки</LargeIcons>
+                <SmallIcons>Мелкие значки</SmallIcons>
+                <List>Список</List>
+                <Detail>Детали</Detail>
+                <Tile>Плитка</Tile>
+                <Help>Помощь</Help>
+                <OnlineDocumentation>Онлайн-документация</OnlineDocumentation>
+                <OnlineIssues>Онлайн-вопросы</OnlineIssues>
+                <OnlineUpdates>Онлайн-обновления</OnlineUpdates>
+                <AboutSuperGrate>О программе {Shared/SuperGrate}</AboutSuperGrate>
+                <SetDestinationUserName>Установить имя пользователя (цель)...</SetDestinationUserName>
+                <Properties>Свойства</Properties>
+                <Start>{Shared/Start}</Start>
+                <Delete>{Shared/Delete}</Delete>
+            </Menu>
+            <Log>
+                <EnterSomeInfoToGetStarted>Введите информацию, чтобы начать!</EnterSomeInfoToGetStarted>
+                <CancelingCurrentTask>Отмена текущей задачи...</CancelingCurrentTask>
+                <VerboseModeDisabled>Режим подробного вывода отключен.</VerboseModeDisabled>
+                <VerboseModeEnabled>Режим подробного вывода включен.</VerboseModeEnabled>
+                <WritingLogTo>Запись журнала в {0}...</WritingLogTo>
+                <LogWrittenSuccessfully>Журнал успешно записан.</LogWrittenSuccessfully>
+                <ThisProgramIsAttemptingToClose>Программа пытается закрыться, попытка {0}/{1}.</ThisProgramIsAttemptingToClose>
+                <GatheringUserProperties>Сбор свойств пользователя...</GatheringUserProperties>
+                <Canceled>Отменено.</Canceled>
+                <Done>{Shared/Log/Done}</Done>
+                <Failed>
+                    <GatherUserProperties>Не удалось собрать свойства пользователя.</GatherUserProperties>
+                </Failed>
+            </Log>
+        </Main>
+    </Control>
+</SGLanguage>
